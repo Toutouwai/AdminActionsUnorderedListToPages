@@ -9,7 +9,7 @@ class AdminActionsUnorderedListToPages extends WireData implements Module {
             'version' => '0.1.1',
             'author' => 'Robin Sallis',
             'href' => 'https://github.com/Toutouwai/AdminActionsUnorderedListToPages',
-            'requires' => 'ProcessAdminActions'
+            'requires' => 'ProcessAdminActions>=0.7.0'
         );
     }
 
