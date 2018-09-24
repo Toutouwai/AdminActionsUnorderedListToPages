@@ -1,8 +1,8 @@
 # Unordered List to Pages
 
-An action for the [Admin Actions](https://modules.processwire.com/modules/process-admin-actions/) module for ProcessWire CMS/CMF. Creates a structure of new pages from an unordered list entered into a CKEditor field. The nesting of further unordered lists within the list will determine the nesting of the created pages.
+An action for the [Admin Actions](https://modules.processwire.com/modules/process-admin-actions/) module for ProcessWire CMS/CMF. Creates a structure of new pages from an unordered list entered into a CKEditor field. The nesting of further unordered lists within the list will determine the nesting of the created pages. Created pages get a default template that you select, and you can override this default template per list item by specifying a template name between `[[` `]]` delimiters.
 
-This can be useful to quickly create a page structure; especially so if you are rebuilding an existing non-ProcessWire site that has a Sitemap page that you can copy and paste from. All the created pages get the same template - for any pages that should use a different template you can easily change this as you edit the page to add content, or use the Page Manipulator action for bulk template changes.
+This action can be useful to quickly create a page structure; especially so if you are rebuilding an existing non-ProcessWire site that has a Sitemap page that you can copy and paste from.
 
 ## Usage
 
