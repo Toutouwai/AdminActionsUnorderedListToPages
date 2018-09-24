@@ -1,0 +1,16 @@
+<?php
+
+class AdminActionsUnorderedListToPages extends WireData implements Module {
+
+    public static function getModuleInfo() {
+        return array(
+            'title' => 'Admin Actions Unordered List to Pages',
+            'summary' => 'Creates a structure of new pages from an unordered list.',
+            'version' => '0.1.1',
+            'author' => 'Robin Sallis',
+            'href' => 'https://github.com/Toutouwai/AdminActionsUnorderedListToPages',
+            'requires' => 'ProcessAdminActions'
+        );
+    }
+
+}
