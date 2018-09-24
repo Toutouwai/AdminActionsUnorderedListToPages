@@ -2,6 +2,8 @@
 
 class UnorderedListToPages extends ProcessAdminActions {
 
+	protected $executeButtonLabel = 'Create Pages';
+
 	protected function defineOptions() {
 
 		return array(
