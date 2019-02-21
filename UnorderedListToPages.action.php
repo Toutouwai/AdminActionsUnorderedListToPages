@@ -86,7 +86,7 @@ class UnorderedListToPages extends ProcessAdminActions {
 		$sanitizer = $this->wire()->sanitizer;
 		foreach($items as $item) {
 
-			$page_title = $this->wire()->sanitizer->text($item->find('text', 0)->innertext, array('convertEntities' => true));
+			$page_title = $sanitizer->text(trim($item->plaintext), array('convertEntities' => true));
 			if(!$page_title) continue;
 			$p = new Page();
 			$template = $this->template;
