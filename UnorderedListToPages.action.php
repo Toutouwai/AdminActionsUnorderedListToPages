@@ -62,7 +62,8 @@ class UnorderedListToPages extends ProcessAdminActions {
 		$parent_page = $this->wire()->pages->get((int) $options['parent_page']);
 		$this->template = $this->wire()->templates->get((string) $options['template']);
 
-		$html = str_get_html($options['source']);
+		$source = str_replace(array('<p>', '</p>'), '', $options['source']);
+		$html = str_get_html($source);
 		$top_ul = $html->find('ul', 0);
 		if(!$top_ul) {
 			$this->failureMessage = htmlentities('No <ul> element found.');
@@ -86,7 +87,7 @@ class UnorderedListToPages extends ProcessAdminActions {
 		$sanitizer = $this->wire()->sanitizer;
 		foreach($items as $item) {
 
-			$page_title = $sanitizer->text(trim($item->plaintext), array('convertEntities' => true));
+			$page_title = $sanitizer->text($item->find('text', 0)->innertext, array('convertEntities' => true));
 			if(!$page_title) continue;
 			$p = new Page();
 			$template = $this->template;
