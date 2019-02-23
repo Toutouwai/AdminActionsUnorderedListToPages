@@ -29,7 +29,7 @@ class UnorderedListToPages extends ProcessAdminActions {
 				'label' => 'Source',
 				'description' => 'Enter/paste unordered list here.',
 				'type' => 'InputfieldCKEditor',
-				'toolbar' => 'BulletedList, Outdent, Indent, Replace',
+				'toolbar' => 'BulletedList, Outdent, Indent, Replace, Source',
 				'rows' => 10,
 				'required' => true,
 			),
