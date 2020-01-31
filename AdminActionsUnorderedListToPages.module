@@ -6,7 +6,7 @@ class AdminActionsUnorderedListToPages extends WireData implements Module {
         return array(
             'title' => 'Unordered List to Pages',
             'summary' => 'Creates a structure of new pages from an unordered list. Addon action for Admin Actions module.',
-            'version' => '0.1.5',
+            'version' => '0.1.6',
             'author' => 'Robin Sallis',
             'href' => 'https://github.com/Toutouwai/AdminActionsUnorderedListToPages',
             'icon' => 'list-ul',
