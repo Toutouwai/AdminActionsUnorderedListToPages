@@ -44,7 +44,7 @@ class UnorderedListToPages extends ProcessAdminActions {
 				'name' => 'template',
 				'label' => 'Default template to use for new pages',
 				'type' => 'select',
-				'options' => $this->wire()->templates->getAll()->explode('name', array('key' => 'name')),
+				'options' => $this->wire()->templates->find('flags=0')->explode('name', array('key' => 'name')),
 				'required' => true,
 			),
 		);
