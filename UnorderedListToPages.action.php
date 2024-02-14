@@ -1,4 +1,4 @@
-<?php
+<?php namespace ProcessWire;
 
 class UnorderedListToPages extends ProcessAdminActions {
 
@@ -57,7 +57,7 @@ class UnorderedListToPages extends ProcessAdminActions {
 
 	protected function executeAction($options) {
 
-		require_once __DIR__ . '/simple_html_dom.php';
+		require_once __DIR__ . '/simple_html_dom_rps.php';
 
 		$parent_page = $this->wire()->pages->get((int) $options['parent_page']);
 		$this->template = $this->wire()->templates->get((string) $options['template']);

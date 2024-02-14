@@ -1,4 +1,6 @@
 <?php
+// RPS custom fixes, marked with "RPS"
+
 /**
  * Website: http://sourceforge.net/projects/simplehtmldom/
  * Additional projects: http://sourceforge.net/projects/debugobject/
@@ -1028,7 +1030,8 @@ class simple_html_dom_node
 
 		if ($this->dom) {
 			$sourceCharset = strtoupper($this->dom->_charset);
-			$targetCharset = strtoupper($this->dom->_target_charset);
+			// RPS fix for PHP 8.2 deprecation notice
+			$targetCharset = strtoupper((string) $this->dom->_target_charset);
 		}
 
 		if (is_object($debug_object)) {
@@ -1484,7 +1487,8 @@ class simple_html_dom
 		// Forcing tags to be closed implies that we don't trust the html, but
 		// it can lead to parsing errors if we SHOULD trust the html.
 		if (!$forceTagsClosed) {
-			$this->optional_closing_array = array();
+			// RPS fix: https://sourceforge.net/p/simplehtmldom/bugs/200/
+			$this->optional_closing_tags = array();
 		}
 
 		$this->_target_charset = $target_charset;
